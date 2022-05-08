@@ -4,6 +4,7 @@ import Card from "../UI/Card";
 import "./IngredientForm.css";
 
 const IngredientForm = React.memo((props) => {
+  console.log('RENDERING INGREDIENTS FORM');
   const submitHandler = (event) => {
     event.preventDefault();
     props.onAddIngredient({title, amount})
@@ -18,7 +19,7 @@ const IngredientForm = React.memo((props) => {
     event.preventDefault()
     setAmount(event.target.value);
   };
-  
+
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   return (
